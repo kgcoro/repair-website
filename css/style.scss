@@ -87,10 +87,10 @@ html {
     z-index: 1000;
 
     &.active {
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        border-bottom: none;
-        box-shadow: $box-shadow;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      border-bottom: none;
+      box-shadow: $box-shadow;
     }
 
     .logo {
@@ -123,9 +123,9 @@ html {
   }
 }
 
-body {
-    height: 200rem;
-}
+
+
+
 
 
 
@@ -165,11 +165,10 @@ body {
 
 @media (max-width: 768px) {
   .header {
-
     .contact-info {
-        display: none;
+      display: none;
     }
-    
+
     #menu-btn {
       display: inline-block;
 
@@ -179,25 +178,24 @@ body {
     }
 
     .navbar {
+      .links {
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background: $white;
+        border-top: $border;
+        border-bottom: $border;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
-        .links {
-            position: absolute;
-            top: 99%; left: 0; right: 0;
-            background: $white;
-            border-top: $border;
-            border-bottom: $border;
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
-            &.active {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            }
-
-            a {
-                display: block;
-                margin: 2.5rem 2rem;
-                font-size: 2.5rem;
-            }
+        &.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
+
+        a {
+          display: block;
+          margin: 2.5rem 2rem;
+          font-size: 2.5rem;
+        }
+      }
     }
   }
 }
