@@ -27,6 +27,27 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
+section {
+  padding: 5rem 10%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: #fff;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #334;
+  border: 0.2rem solid #334;
+}
+.btn:hover {
+  background: #2597f4;
+  border-color: #2597f4;
+  color: #fff;
+}
+
 .header .contact-info {
   padding: 2rem 10%;
   display: flex;
@@ -86,8 +107,31 @@ html::-webkit-scrollbar-thumb {
   display: none;
 }
 
-body {
-  height: 200rem;
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.home .image {
+  flex: 1 1 40rem;
+}
+.home .image img {
+  width: 100%;
+}
+.home .content {
+  flex: 1 1 40rem;
+}
+.home .content h3 {
+  font-size: 4.5rem;
+  text-transform: capitalize;
+  color: #334;
+}
+.home .content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  padding: 1rem 0;
 }
 
 /* media queries */
@@ -97,6 +141,9 @@ body {
   }
   .header .navbar {
     padding: 2rem 5%;
+  }
+  section {
+    padding: 3rem 5%;
   }
 }
 @media (max-width: 991px) {
@@ -108,6 +155,9 @@ body {
   }
   .header .navbar {
     padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
   }
 }
 @media (max-width: 768px) {
@@ -142,6 +192,9 @@ body {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .home .content h3 {
+    font-size: 3rem;
   }
 }
 
